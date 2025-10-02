@@ -6,14 +6,14 @@
       "use": "@vercel/static-build",
       "config": {
         "buildCommand": "npm run vercel-build",
-        "outputDirectory": "dist/reviewer-management-system"
+        "outputDirectory": "dist/reviewer-management-system/browser"
       }
     }
   ],
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/dist/reviewer-management-system/index.html"
+      "destination": "/index.html"
     }
   ]
 }
