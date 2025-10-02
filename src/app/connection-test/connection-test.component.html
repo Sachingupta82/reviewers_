@@ -1,0 +1,37 @@
+<div class="connection-test-container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Backend Connection Test</h3>
+    </div>
+    <div class="card-body">
+      <div class="status-section">
+        <h4>Connection Status:</h4>
+        <div class="status-indicator" [class.connected]="isConnected" [class.disconnected]="!isConnected">
+          <span class="status-text">{{ backendStatus }}</span>
+        </div>
+      </div>
+      
+      <div *ngIf="errorMessage" class="error-section">
+        <h4>Error Details:</h4>
+        <p class="error-message">{{ errorMessage }}</p>
+      </div>
+      
+      <div class="actions">
+        <button class="btn btn-primary" (click)="retryConnection()">
+          Test Connection Again
+        </button>
+      </div>
+      
+      <div class="info-section">
+        <h4>Backend Information:</h4>
+        <ul>
+          <li><strong>URL:</strong> https://reviewer-backend-hg27.onrender.com</li>
+          <li><strong>Health Endpoint:</strong> /api/health</li>
+          <li><strong>Reviewers API:</strong> /reviewers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
